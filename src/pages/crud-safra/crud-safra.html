@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-navbar color="igreen">
+    <ion-title>Cadastro</ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only color="royal" (click)="salvar()">
+          Salvar
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon class="custom-icon" name="nutrition"></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Cultura</ion-label>
+            <ion-select>
+              <ion-option value="nes">Cultura 1</ion-option>
+              <ion-option value="n64">Cultura 2</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Unidades de Medida</ion-label>
+            <ion-select>
+              <ion-option value="nes">Sacos (60kg) / ha</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Início</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col col-6>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Fim</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Nome da Safra</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="../../assets/imgs/map.jpg">
+      </ion-avatar>
+      <ion-label>T01</ion-label>
+      <div item-end>
+         <ion-checkbox color="dark" checked="true"></ion-checkbox>
+      </div>
+    </ion-item>
+    <ion-item>
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/map.jpg">
+        </ion-avatar>
+        <ion-label>T02</ion-label>
+        <div item-end>
+           <ion-checkbox color="dark" checked="true"></ion-checkbox>
+        </div>
+      </ion-item>
+  </ion-list>
+
+
+</ion-content>

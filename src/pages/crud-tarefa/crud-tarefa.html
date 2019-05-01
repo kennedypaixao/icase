@@ -1,0 +1,128 @@
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>Tarefa</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+        <ion-icon name="share"></ion-icon>
+      </button>
+      <button ion-button icon-only color="light">
+        Salvar
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-navbar color="light">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <small>Milho 2018/2018</small>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <h2>Colheita</h2>
+        </ion-col>
+        <ion-col col-6 (click)="goOperacao()">
+          <h2>
+            <ion-icon name="share"></ion-icon> Operação</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <h5>TH01</h5>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon class="custom-icon" name="map"></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <h5>1 Áreas(s)</h5>
+            </ion-col>
+            <ion-col col-12>
+              <ion-list>
+                <ion-item>
+                  <ion-label floating>Área (ha)</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon class="custom-icon" name="car"></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <ion-list>
+                <ion-item>
+                  <ion-label floating>Produtividade (Sacos 60kg/h)</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label floating>Produção Bruta (Sacos 60kg/h)</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                  <ion-label floating>Produção Líquida (Sacos 60kg/h)</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-list>
+              <br />
+              <h5>14 Cargas</h5>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon class="custom-icon" name="calendar"></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <ion-list>
+                <ion-item>
+                  <ion-label floating>Data de Inicio</ion-label>
+                  <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+            <ion-col col-12>
+              <ion-list>
+                <ion-item>
+                  <ion-label floating>Data de Fim</ion-label>
+                  <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

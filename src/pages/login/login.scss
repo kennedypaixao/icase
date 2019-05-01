@@ -1,0 +1,92 @@
+page-login {
+    
+
+    .logo {
+        text-align: center;
+        &.bg-img {
+            background: url(../assets/imgs/bg.png);
+            background-size: cover;
+            background-position: 100%;
+            background-position-y: 72%;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: rgba(0, 0, 0, 0.5);
+            }
+        }
+        img {
+            width: 140px;
+            margin: 55px 0;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .form {
+        .list {
+            .select {
+                padding: 0;
+                max-width: unset;
+                width: 100%;
+                margin-bottom: 10px;
+                margin-top: 21px;
+                .select-text {
+                    text-overflow: unset;
+                    font-size: 1.5rem;
+                }
+                .select-icon {
+                    width: 16px;
+                    .select-icon-inner {
+                        color: #000;
+                    }
+                }
+            }
+        }
+        .signin {
+            .list {
+                padding-top: 10px;
+            }
+            .bottom-side {
+                .row {
+                    margin-top: 22px;
+                    .col {
+                        text-align: center;
+                        img {
+                            width: 30px;
+                        }
+                    }
+                }
+            }
+        }
+        .signin,
+        .register {
+            .row {
+                .col {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+    .row {
+        align-items: center;
+        margin: 0 -7px;
+        .col {
+            p {
+                color: #494949;
+            }
+        }
+    }
+
+
+    .custom-label{
+        text-overflow: ellipsis!important;
+        overflow: unset!important;
+    }
+}

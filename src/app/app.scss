@@ -1,0 +1,250 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+.text-orange {
+    color: color($colors, iorange) !important;
+}
+
+.text-green{
+    color: color($colors, igreen) !important;
+}
+
+.background-orange{
+    background-color: color($colors, iorange) !important;
+}
+
+.bar-buttons-md {
+    order: 3;
+}
+
+.select-md{
+    max-width: 100%;
+    width: 100%;
+}
+
+.select-md, .select-ios {
+    padding: 13px 8px 13px 0px;
+}
+
+.fab {
+    contain: layout;
+}
+
+button[ion-fab] {
+    overflow: visible;
+    position: relative;
+
+    ion-label {
+        position: absolute;
+        top: -8px;
+        right: 40px;
+
+        color: white;
+        background-color: rgba(0,0,0,0.7);
+        line-height: 24px;
+        padding: 4px 8px;
+        border-radius: 4px;
+    }
+}
+
+.button {
+    text-transform: none;
+    font-size: 1.4rem;
+    letter-spacing: .5px;
+    font-weight: 400;
+    &.btn {
+        height: 4.5rem;
+    }
+    &.btn-shadow {
+        box-shadow: 0 11px 26px -8px rgba(249, 84, 36, 0.74);
+    }
+    &.btn-orange {
+        background: color($colors, iorange);
+        &:hover,
+        &:focus,
+        &:active {
+            background: color($colors, iorange);
+        }
+    }
+}
+
+.segment {
+    position: relative;
+    padding-top: 7px;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        width: calc(100% - 32px);
+        height: 3px;
+        display: block;
+        background: #f9f9f9;
+        margin: auto;
+    }
+    .segment-button {
+        position: relative;
+        font-size: 1.7rem;
+        height: 5rem;
+        text-transform: none;
+        color: #ababab;
+        border-bottom: none;
+        font-weight: 400;
+        &.segment-activated {
+            border-bottom: none;
+            color: #000;
+            font-weight: 500;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                right: 0;
+                width: 100px;
+                height: 3px;
+                display: block;
+                background: color($colors, igreen);
+                margin: auto;
+            }
+        }
+    }
+}
+
+.menu-inner {
+    .home-menu {
+       
+    }
+    .content {
+        background-color: color($colors, ilight);
+        // background: url(../assets/imgs/bg.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            // background: rgba(0, 0, 0, 0.5);
+        }
+        ion-item {
+            padding-left: 25px !important;
+            &.item {
+                background: transparent;
+                .item-inner {
+                    border: none;
+                    p {
+                        color: #000;
+                        font-weight: 300;
+                        font-size: 1.1rem;
+                    }
+                }
+                ion-icon {
+                    font-size: 2.3rem !important;
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+    .logo-menu {
+        background-color: color($colors, igreen);
+        padding: 20px 27px;
+        img {
+            width: 165px;
+        }
+        .item {
+            background: transparent;
+            .item-inner {
+                border-bottom: none;
+            }
+            .label {
+                padding-bottom: 0px;
+                margin-bottom: 0;
+                h2 {
+                    font-weight: 500;
+                }
+                p {
+                    color: #fff;
+                    padding-top: 4px;
+                    font-size: 1.7rem;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+}
+
+.form {
+    padding-top: 1px;
+    width: 100%;
+    max-width: 70%;
+    margin: 0 auto;
+    .list {
+        .item {
+            align-items: flex-end;
+            padding-left: 0;
+            border-bottom: 1px solid #ccc !important;
+            box-shadow: none;
+            .item-inner {
+                padding-right: 0;
+                ion-avatar {
+                    min-width: unset;
+                    margin: 0;
+                    min-height: unset;
+                    margin-bottom: 11px;
+                }
+                .input-wrapper {
+                    .label {
+                        font-weight: 300 !important;
+                        font-size: 1.44rem;
+                        margin-top: 10px;
+                        color: #a5a5a5;
+                    }
+                }
+            }
+            &.item-input.input-has-focus {
+                &:last-child {
+                    box-shadow: none;
+                }
+                .item-inner {
+                    border-bottom-color: color($colors, igreen) !important;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    p {
+        small {
+            font-size: 1.2rem;
+        }
+    }
+    .row &.bottom-side {
+        align-items: center;
+        .col {
+            p {
+                color: #494949;
+            }
+        }
+    }
+}

@@ -1,0 +1,65 @@
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>
+      <span class="city" style="margin-left: 0 !important;">
+        <ion-label class="text-white fw-3 home-lable">Horimetro (h): 889,3</ion-label>
+        <div class="select-text">027-FORD 7630 TR4</div>
+      </span>
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <small>Ano</small>
+        <p>2000</p>
+      </ion-col>
+      <ion-col col-4>
+        <small>Adquirido em:</small>
+        <p>01/01/2000</p>
+      </ion-col>
+      <ion-col col-4>
+        <small>Valor:</small>
+        <p>R$ 98.000,00</p>
+      </ion-col>
+      <ion-col col-4>
+        <small>Vida Útil (h):</small>
+        <p>10000</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <br />
+  <ion-card>
+    <ion-card-content>
+      <small style="display: block;">Quinta-Feira</small>
+      <small style="display: block;">25/10/2018</small>
+      <p style="font-weight: bold">Manutenção</p>
+      <small style="display: block;">Horímetro (h): 885,1</small>
+      <p>OLEO TDH</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-fab bottom right edge>
+      <button ion-fab color="igreen">
+        <ion-icon name="add"></ion-icon>
+      </button>
+      <ion-fab-list side="top">
+        <button ion-fab (click)="goNovoAbastecimento()">
+          <ion-icon name="bookmarks"></ion-icon>
+          <ion-label>Novo abastecimento</ion-label>
+        </button>
+      </ion-fab-list>
+    </ion-fab>
+
+</ion-content>

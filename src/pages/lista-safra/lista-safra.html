@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar color="igreen">
+    <ion-title>Safras</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="closeModal()" *ngIf="isModal">
+        <ion-icon name="close"></ion-icon>
+      </button>
+      <button ion-button icon-only color="royal" (click)="goCrud()" *ngIf="!isModal">
+        Cadastrar Safra
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-avatar item-start>
+        <ion-icon name="nutrition"></ion-icon>
+      </ion-avatar>
+      <h2>Milho 2019/2019</h2>
+      <h3>01/03/2019 - 31/08/2019</h3>
+      <p>Área total na safra
+        <strong>2324,22 ha</strong>
+      </p>
+      <ion-icon name="create" item-end (click)="goCrud()"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

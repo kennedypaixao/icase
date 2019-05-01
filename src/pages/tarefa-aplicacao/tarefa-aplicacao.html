@@ -1,0 +1,80 @@
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>Aplicação</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+        <ion-icon name="share"></ion-icon>
+      </button>
+      <button ion-button icon-only color="light">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="area-map">
+    <div id="map"></div>
+  </div>
+
+  <div padding>
+    <h2 class="text-green">
+      Planejamento
+    </h2>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <span class="dataInicio">
+            <small>Quinta-feira</small>
+            <small>22/11/2018</small>
+          </span>
+        </ion-col>
+        <ion-col col-6>
+          <span class="dataFim" style="float: right">
+            <small>Quinta-feira</small>
+            <small>22/11/2018</small>
+          </span>
+        </ion-col>
+        <ion-col col-12>
+          <strong>
+            TH27
+          </strong>
+          <br /> Área Planejada:
+          <strong> 210.50 ha </strong>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <hr class="background-orange" />
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <p>
+            ORKESTRA SC [AP]
+          </p>
+        </ion-col>
+        <ion-col col-6>
+          <p class="lista-valor">
+            0.30 L/ha | 63.15 L
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <h2 class="text-green">
+        Realização
+      </h2>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button full color="iorange">Registrar Realização</button>
+</ion-footer>

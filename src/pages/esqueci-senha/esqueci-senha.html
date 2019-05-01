@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="igreen">
+    <ion-title>Esqueci a senha</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list no-lines>
+    <ion-item>
+      <ion-label floating>Informe seu e-mail</ion-label>
+      <ion-input type="text" [(ngModel)]="email"></ion-input>
+    </ion-item>
+  </ion-list>
+  <button ion-button round full class="btn-shadow btn" color="iorange" margin-bottom (click)="lembrar()">
+    Lembrar
+  </button>
+</ion-content>

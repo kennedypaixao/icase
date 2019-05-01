@@ -1,0 +1,111 @@
+<ion-header class="home-menu">
+  <ion-navbar color="igreen">
+
+    <ion-title>
+      <span class="city" style="margin-left: 0 !important;">
+        <ion-label class="text-white fw-3 home-lable label-custom">Soja 2018/2019</ion-label>
+        <div class="select-text">Aplicação: Desseca...</div>
+        <ion-label class="text-white fw-3 home-lable label-custom">TH01</ion-label>
+      </span>
+    </ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+        <ion-icon name="share"></ion-icon>
+      </button>
+      <button ion-button icon-only color="light">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <div class="area-map">
+    <div id="map"></div>
+  </div>
+
+  <h2 class="text-green">
+    REALIZAÇÃO
+  </h2>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <span class="dataInicio">
+          <small style="display: block;">Início</small>
+          <small>Quinta-feira</small>
+          <small>22/11/2018</small>
+        </span>
+      </ion-col>
+      <ion-col col-6>
+        <span class="dataFim" style="float: right">
+          <small style="display: block;">Fim</small>
+          <small>Quinta-feira</small>
+          <small>22/11/2018</small>
+        </span>
+      </ion-col>
+      <ion-col col-12>
+        <strong>
+          TH27
+        </strong>
+        <br /> Área Realizada:
+        <strong> 60.00 ha </strong>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <hr class="background-orange" />
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <p>
+          ORKESTRA SC [AP]
+        </p>
+      </ion-col>
+      <ion-col col-6>
+        <p class="lista-valor">
+          0.30 L/ha | 63.15 L
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-6>
+          <p>
+            ORKESTRA SC [AP]
+          </p>
+        </ion-col>
+        <ion-col col-6>
+          <p class="lista-valor">
+            0.30 L/ha | 63.15 L
+          </p>
+        </ion-col>
+      </ion-row>
+  </ion-grid>
+
+
+  <ion-fab bottom right edge>
+    <button ion-fab color="igreen">
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab (click)="goCrudObservacao()">
+        <ion-icon name="bookmarks"></ion-icon>
+        <ion-label>Nova Observação</ion-label>
+      </button>
+      <button ion-fab>
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Registrar Atividade sem Planejamento</ion-label>
+      </button>
+      <button ion-fab>
+        <ion-icon name="calendar"></ion-icon>
+        <ion-label>Planejar Atividade</ion-label>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

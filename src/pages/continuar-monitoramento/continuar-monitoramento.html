@@ -1,0 +1,45 @@
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>Monitoramento</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+        <ion-icon name="share"></ion-icon>
+      </button>
+      <button ion-button icon-only color="light">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-segment [(ngModel)]="area">
+    <ion-segment-button value="sumario">
+      Sumário
+    </ion-segment-button>
+    <ion-segment-button value="realizacao">
+      REALIZAÇÃO
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="area" class="form">
+    <div *ngSwitchCase="'sumario'" class="signin">
+      <p text-center color="igrey">Este monitoramento não possui nenhuma verificação de pestes.</p>
+    </div>
+
+    <div *ngSwitchCase="'realizacao'" class="register">
+    </div>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button full color="igreen" (click)="salvar()">
+    SALVAR
+  </button>
+</ion-footer>

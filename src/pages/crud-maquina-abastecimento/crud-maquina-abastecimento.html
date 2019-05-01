@@ -1,0 +1,69 @@
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>Abastecimento</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light" (click)="salvar()">
+        Salvar
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-row>
+    <ion-col col-12>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Selecione Safra</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+    <ion-col col-12>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Horímetro (h)</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+    <ion-col col-12>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Data</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+    <ion-col col-12>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Selecione o Local de Estoque</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+
+  </ion-row>
+
+  <ion-row>
+    <ion-col col-12>
+      <button ion-button clear full color="primary">
+        Adicionar Item
+      </button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col col-12>
+      <ion-list>
+        <ion-item>
+          <ion-label floating>Observações</ion-label>
+          <ion-textarea rows="3" maxLength="500"></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-content>

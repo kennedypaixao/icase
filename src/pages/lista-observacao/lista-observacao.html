@@ -1,0 +1,39 @@
+<ion-header class="home-menu">
+  <ion-navbar color="igreen">
+    <button ion-button menuToggle>
+      <ion-icon name="menu" class="text-white"></ion-icon>
+    </button>
+
+    <ion-title>
+      <span class="city" style="margin-left: 0 !important;">
+        <ion-label class="text-white fw-3 home-lable">Soja 2018/2019</ion-label>
+        <div class="select-text">Faz. Esperança</div>
+      </span>
+    </ion-title>
+
+    <!-- <ion-buttons end>
+      <button ion-button icon-only color="light" menuToggle="myFiltro">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons> -->
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+  <ion-card (click)="goDetalheTarefaMonitoramento()">
+    <ion-card-header>
+      <small>29 de Janeiro 2019</small>
+      <p>TH40</p>
+      Nota
+    </ion-card-header>
+    <ion-card-content>
+      Estádio Fenológico: V4
+      <br /> Estádio Fenológico: V-4/V-5
+      <br /> Invasoras: a bordadura com TG 42 vassourinha
+      <br /> Trapoeraba: capim pé de galinha e semente de corda de viola e trampoberaba no geral.
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

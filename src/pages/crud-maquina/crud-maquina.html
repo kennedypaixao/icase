@@ -1,0 +1,98 @@
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>Nova Máquina</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+        Salvar
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Nome</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Tipo</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Ano de fabricação</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Horídremo (h)</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Vida Util (h)</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Observação</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-12>
+          <ion-list>
+            <ion-item>
+              <ion-label floating>Adquirido em</ion-label>
+              <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-12>
+          <button ion-button icon-only block (click)="goSelectCamera()">
+            <ion-icon name="camera"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+
+  </ion-grid>
+
+</ion-content>

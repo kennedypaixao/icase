@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar color="igreen">
+      <ion-buttons start>
+          <button ion-button icon-only color="royal" (click)="closeModal()" >
+            SAIR
+          </button>
+        </ion-buttons>
+    <ion-title></ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="goVerificacoes()" >
+        próximo
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div padding>
+    <h3 text-center>Que pragas e doenças você encontrou?</h3>
+  </div>
+
+  <ion-searchbar></ion-searchbar>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>AFOGAMENTO</ion-label>
+      <ion-checkbox color="iorange"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+</ion-content>

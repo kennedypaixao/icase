@@ -1,0 +1,181 @@
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>Atividade</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+        <ion-icon name="share"></ion-icon>
+      </button>
+      <button ion-button icon-only color="light">
+        Salvar
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-navbar color="light">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <small>Milho 2018/2018</small>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <h2>Preparo do Solo</h2>
+        </ion-col>
+        <ion-col col-6 (click)="goOperacao()">
+          <h2>
+            <ion-icon name="share"></ion-icon>
+            Operação
+          </h2>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-12>
+          <h5>TH01</h5>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon class="custom-icon" name="map"></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <h5>1 Áreas(s)</h5>
+            </ion-col>
+            <ion-col col-12>
+              <ion-list>
+                <ion-item>
+                  <ion-label floating>Área (ha)</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button clear full color="primary" (click)="goInsumos()">
+          Adicionar insumos
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-list>
+      <ion-item>
+        <ion-icon name="leaf" item-start></ion-icon>
+        ASSIST [AP]
+
+        <ion-note item-end="" class="note note-ios">0.30 L/ha</ion-note>
+
+        <button ion-button round item-end color="danger">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon class="custom-icon" name="calendar"></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-12>
+              <ion-list>
+                <ion-item>
+                  <ion-label floating>Data de Inicio</ion-label>
+                  <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+            <ion-col col-12>
+              <ion-list>
+                <ion-item>
+                  <ion-label floating>Data de Fim</ion-label>
+                  <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button clear full color="primary" (click)="goMaquinas();">
+          Adicionar Maquina
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-list>
+      <ion-item>
+        <ion-icon name="leaf" item-start></ion-icon>
+        Maquina
+        <ion-note item-end="" class="note note-ios">0.30 L/ha</ion-note>
+        <button ion-button round item-end color="danger">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button clear full color="primary">
+          Adicionar Trabalhadores
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-list>
+      <ion-item>
+        <ion-icon name="leaf" item-start></ion-icon>
+        Trabalhadores
+        <ion-note item-end="" class="note note-ios">0.30 L/ha</ion-note>
+
+        <button ion-button round item-end color="danger">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button clear full color="primary">
+          Adicionar Clima
+        </button>
+      </ion-col>
+    </ion-row>
+
+    <ion-list>
+      <ion-item>
+        <ion-icon name="leaf" item-start></ion-icon>
+        CLIMA
+
+        <ion-note item-end="" class="note note-ios">0.30 L/ha</ion-note>
+
+        <button ion-button round item-end color="danger">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list>
+
+  </ion-grid>
+
+</ion-content>

@@ -1,0 +1,50 @@
+<ion-header>
+
+    <ion-navbar color="igreen">
+      <ion-title>Nova Praga ou Doença</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only color="light" (click)="salvar()">
+          Salvar
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <ion-row>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Nome Comum</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Nome Científico</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Tipo</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col col-12>
+          <ion-list>
+            <ion-item>
+              <ion-label floating>Escala</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+    </ion-row>
+  </ion-content>

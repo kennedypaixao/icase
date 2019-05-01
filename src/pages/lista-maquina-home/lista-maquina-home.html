@@ -1,0 +1,41 @@
+<ion-header class="home-menu">
+  <ion-navbar color="igreen">
+    <button ion-button menuToggle>
+      <ion-icon name="menu" class="text-white"></ion-icon>
+    </button>
+
+    <ion-title>
+      <span class="city" style="margin-left: 0 !important;">
+        <ion-label class="text-white fw-3 home-lable">Soja 2018/2019</ion-label>
+        <div class="select-text">Faz. Esperança</div>
+      </span>
+    </ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item (click)="goDetalhe()">
+      <ion-thumbnail item-start>
+        <img src="../../assets/imgs/caminhao.jpg">
+      </ion-thumbnail>
+      <h2>027-FORD 7630 TR4</h2>
+      <p>Último abastecimento: 20/10</p>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab bottom right edge>
+    <button ion-fab color="igreen">
+      <ion-icon name="add"></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab>
+        <ion-icon name="bookmarks"></ion-icon>
+        <ion-label>Registrar Tarefa sem Planjamento</ion-label>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+
+</ion-content>

@@ -1,0 +1,131 @@
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-buttons end>
+      <button ion-button icon-only color="light">
+        Salvar
+      </button>
+      <button ion-button icon-only color="light">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-navbar color="light">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <small>Milho 2018/2018</small>
+          <h2>Observação</h2>
+          <small>TH01 (58,27 ha)</small>
+        </ion-col>
+        <ion-col col-6>
+          <button ion-button round block color="igreen">
+            RESOLVER
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+
+    <ion-row>
+
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label (click)="goMonitoramento()">Tipo *</ion-label>
+            <!-- <ion-input type="text" (click)="goMonitoramento()"></ion-input> -->
+          </ion-item>
+        </ion-list>
+      </ion-col>
+
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Data</ion-label>
+            <ion-datetime displayFormat="MM/DD/YYYY"></ion-datetime>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>O que aconteceu na sua lavoura?</ion-label>
+            <ion-textarea rows="3" maxLength="500"></ion-textarea>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+
+      <ion-col col-12>
+        <ion-icon name="camera" color="igreen"></ion-icon>
+      </ion-col>
+
+      <ion-col col-12>
+        <button ion-button clear full color="primary" (click)="goSelecionaLocalizacao()">
+          <ion-icon name="pin" color="igreen"></ion-icon>
+          Adicionar Localização
+        </button>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-8>
+        <h4 style="margin-top: 10px;">OBSERVAÇÕES ADICIONAIS</h4>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button clear full color="primary">
+          ESCONDER
+        </button>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <h4>
+          OUTRAS OBSERVAÇÕES
+        </h4>
+      </ion-col>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label  (click)="goPlanta()">Plantas por M²</ion-label>
+            <!-- <ion-input type="text"></ion-input> -->
+          </ion-item>
+        </ion-list>
+      </ion-col>
+      <ion-col col-12>
+        <ion-list>
+          <ion-item>
+            <ion-label floating>Estádio Fenológico</ion-label>
+            <ion-input type="text"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-12>
+        <h4>
+          PRAGAS OBSERVADAS
+        </h4>
+      </ion-col>
+      <ion-col col-12>
+        <button ion-button clear full color="primary">
+          ADICIONAR PRAGA
+        </button>
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

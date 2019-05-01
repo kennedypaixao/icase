@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>Maquinas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+  <ion-searchbar></ion-searchbar>
+
+      <ion-list padding>
+        <ion-list-header>
+          Catãlogo
+        </ion-list-header>
+        <ion-item (click)="goModal()">
+          <h2>027-FORD 7630 TR4</h2>
+          <ion-note item-end="" class="note note-ios">MODELO 7630</ion-note>
+        </ion-item>
+      </ion-list>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button full color="igreen" (click)="goCrud()">
+    Adicionar novo
+  </button>
+</ion-footer>

@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>Monitoramento</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <div id="map-monitoramento"></div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-title>Amostragens Realizadas: 0</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar color="light">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-5>
+          Distancia até ponto:
+          <br />
+          <ion-icon name="pin"></ion-icon>
+          --
+        </ion-col>
+        <ion-col col-5>
+          Tempo:
+          <br /> 
+          00:00
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button icon-only round color="secondary" (click)="goAmostra()">
+            <ion-icon name="play"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+</ion-footer>

@@ -1,0 +1,225 @@
+<ion-menu [content]="content" side="left" id="myMenu">
+  <ion-header class="home-menu">
+    <div class="logo-menu">
+      <img src="assets/imgs/logo-1.png">
+      <ion-item>
+        <h2 class="text-white">Rodrigo Palma</h2>
+        <p>dingaopalma@gmail.com</p>
+      </ion-item>
+    </div>
+  </ion-header>
+  <ion-content>
+    <ion-list no-lines>
+      <ion-item menuClose>
+        <ion-avatar item-start text-center>
+          <ion-icon name="ios-home" class="text-green"></ion-icon>
+        </ion-avatar>
+        <ion-select [(ngModel)]="fazenda" class="select-city">
+          <ion-option value="faz1">Faz. Esperança</ion-option>
+          <ion-option value="faz2">Faz.</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item menuClose (click)="goSafra()">
+        <ion-avatar item-start text-center>
+          <ion-icon name="md-restaurant" class="text-green"></ion-icon>
+        </ion-avatar>
+        <h2 class="text-white">Safra</h2>
+        <p>Lista de safras</p>
+      </ion-item>
+      <ion-item menuClose (click)="goAreaFazenda()">
+        <ion-avatar item-start text-center>
+          <ion-icon name="md-contact" class="text-green"></ion-icon>
+        </ion-avatar>
+        <h2 class="text-white">Área da Fazenda</h2>
+        <p></p>
+      </ion-item>
+      <ion-item menuClose>
+        <ion-avatar item-start text-center>
+          <ion-icon name="md-heart" class="text-green"></ion-icon>
+        </ion-avatar>
+        <h2 class="text-white">Dados Sincronizados</h2>
+        <p></p>
+      </ion-item>
+      <ion-item menuClose (click)="goChat()">
+        <ion-avatar item-start text-center>
+          <ion-icon name="ios-film" class="text-green"></ion-icon>
+        </ion-avatar>
+        <h2 class="text-white">Chat com Suporte</h2>
+        <p></p>
+      </ion-item>
+      <ion-item menuClose (click)="goSair();">
+        <ion-avatar item-start text-center>
+          <ion-icon name="md-power" class="text-green"></ion-icon>
+        </ion-avatar>
+        <h2 class="text-white">Sair</h2>
+        <p></p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-menu [content]="content" side="right" id="myFiltro">
+  <ion-header>
+    <ion-navbar color="igreen">
+      <ion-buttons start>
+        <button ion-button icon-only color="light" menuToggle="myFiltro">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-buttons>
+      <ion-title>Escolha o Filtro</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only color="light">
+          LIMPAR
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  <ion-content>
+
+    <ion-list radio-group>
+      <ion-list-header>
+        Data
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Hoje</ion-label>
+        <ion-radio checked="true" value="go"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Esta Semana</ion-label>
+        <ion-radio value="rust"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Este Mês</ion-label>
+        <ion-radio value="python"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Este Ano</ion-label>
+        <ion-radio value="a"></ion-radio>
+      </ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header>
+        Situação
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Agendada</ion-label>
+        <ion-checkbox color="iorange"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Andamento</ion-label>
+        <ion-checkbox color="iorange"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Realizada</ion-label>
+        <ion-checkbox color="iorange"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+    
+    <ion-list>
+      <ion-list-header>
+        Grupo de Tarefas
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Preparo do Solo</ion-label>
+        <ion-checkbox color="iorange"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Plantio</ion-label>
+        <ion-checkbox color="iorange"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Fertilização</ion-label>
+        <ion-checkbox color="iorange"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Aplicação</ion-label>
+        <ion-checkbox color="iorange"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Colheita</ion-label>
+        <ion-checkbox color="iorange"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Outro</ion-label>
+        <ion-checkbox color="iorange"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Monitoramento</ion-label>
+        <ion-checkbox color="iorange"></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Instalação de Armatilhas</ion-label>
+        <ion-checkbox color="iorange"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+
+</ion-menu>
+
+<ion-menu [content]="content" side="right" id="myFiltroEstoque">
+    <ion-header>
+      <ion-navbar color="igreen">
+        <ion-buttons start>
+          <button ion-button icon-only color="light" menuToggle="myFiltroEstoque">
+            <ion-icon name="close"></ion-icon>
+          </button>
+        </ion-buttons>
+        <ion-title>Escolha o Filtro</ion-title>
+        <ion-buttons end>
+          <button ion-button icon-only color="light">
+            LIMPAR
+          </button>
+        </ion-buttons>
+      </ion-navbar>
+    </ion-header>
+    <ion-content>
+  
+      <ion-list>
+        <ion-list-header>
+          Grupos
+        </ion-list-header>
+  
+        <ion-item>
+          <ion-label>Grupo A</ion-label>
+          <ion-checkbox color="iorange"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Grupo B</ion-label>
+          <ion-checkbox color="iorange"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Grupo C</ion-label>
+          <ion-checkbox color="iorange"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      
+      <ion-list>
+        <ion-list-header>
+          Centro de Estoque
+        </ion-list-header>
+  
+        <ion-item>
+          <ion-label>Centro A</ion-label>
+          <ion-checkbox color="iorange"></ion-checkbox>
+        </ion-item>
+        <ion-item>
+          <ion-label>Centro B</ion-label>
+          <ion-checkbox color="iorange"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+  
+    </ion-content>
+  
+  </ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

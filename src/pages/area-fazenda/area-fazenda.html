@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>Áreas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-segment [(ngModel)]="area">
+    <ion-segment-button value="map">
+      Mapa
+    </ion-segment-button>
+    <ion-segment-button value="list">
+      Lista
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="area" class="form">
+    <div *ngSwitchCase="'map'" class="signin" style="height:100%;">
+      <div id="map"></div>
+
+      <ion-fab right bottom>
+          <button ion-fab color="igreen"><ion-icon name="add"></ion-icon></button>
+          <ion-fab-list side="top">
+            <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+            <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+          </ion-fab-list>
+        </ion-fab>
+    </div>
+
+    <div *ngSwitchCase="'list'" class="register">
+        <ion-list>
+            <ion-item>
+              <ion-avatar item-start>
+                <img src="../../assets/imgs/map.jpg">
+              </ion-avatar>
+              <ion-label>TH01 (24,58 ha)</ion-label>
+            </ion-item>
+          </ion-list>
+    </div>
+  </div>
+
+
+</ion-content>

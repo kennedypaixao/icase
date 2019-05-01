@@ -1,0 +1,33 @@
+<!--
+  Generated template for the ListaChatPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>Conversas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item (click)="goChat()">
+          <ion-avatar item-start>
+            <img src="../../assets/imgs/person.jpg">
+          </ion-avatar>
+          <h2>André</h2>
+          <p>Olá, tudo bem?...</p>
+          <ion-note item-end="" class="note note-ios">3:43 pm</ion-note>
+        </ion-item>
+      </ion-list>
+
+      <ion-fab right bottom>
+          <button ion-fab color="igreen" (click)="goChat()">
+            <ion-icon name="add"></ion-icon>
+          </button>
+        </ion-fab>
+</ion-content>

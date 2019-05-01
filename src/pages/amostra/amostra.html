@@ -1,0 +1,102 @@
+<!--
+  Generated template for the AmostraPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="igreen">
+    <ion-title>Amostra</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-grid>
+
+    <ion-row>
+      <ion-col col-2>
+        <ion-icon class="custom-icon" name="map"></ion-icon>
+      </ion-col>
+      <ion-col col-10>
+        <ion-grid>
+          <ion-row>
+            <ion-col col-8>
+              <h5>Selecione uma Área</h5>
+            </ion-col>
+            <ion-col col-4>
+              <button ion-button color="secondary" clear (click)="goTalhao()">TROCAR</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      <ion-col col-12>
+        <h5>Verificações</h5>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-segment [(ngModel)]="area">
+    <ion-segment-button value="ponto">
+      Ponto
+    </ion-segment-button>
+    <ion-segment-button value="planta">
+      Plantas
+    </ion-segment-button>
+    <ion-segment-button value="batidapano">
+      Batida de Pano
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="area" class="form">
+    <div *ngSwitchCase="'ponto'" class="signin">
+
+      <ion-row>
+        <ion-col col-12>
+          <button ion-button clear full color="primary" (click)="goDoencaPraga()">
+            Adicionar pragas e doenças
+          </button>
+        </ion-col>
+        <ion-col col-12>
+          <button ion-button clear full color="primary">
+            Adicionar outras verificações
+          </button>
+        </ion-col>
+        <ion-col col-12>
+          <ion-list>
+            <ion-item>
+              <ion-label floating>Plantas por M²</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Estadio Fenológico</ion-label>
+              <ion-select>
+                <ion-option>Selecione</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label floating>Observações</ion-label>
+              <ion-input type="text"></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+
+      <button ion-button full color="igreen">
+        SALVAR
+      </button>
+
+    </div>
+
+    <div *ngSwitchCase="'planta'" class="register">
+
+    </div>
+
+    <div *ngSwitchCase="'batidapano'" class="register">
+
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,91 @@
+<ion-content>
+  <div class="logo bg-img">
+    <img src="assets/imgs/logo-1.png">
+  </div>
+
+
+  <ion-segment [(ngModel)]="login">
+    <ion-segment-button value="signin">
+      Login
+    </ion-segment-button>
+    <ion-segment-button value="register">
+      Cadastre-se
+    </ion-segment-button>
+  </ion-segment>
+
+
+  <div [ngSwitch]="login" class="form">
+    <div *ngSwitchCase="'signin'" class="signin">
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label floating>E-mail</ion-label>
+          <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Senha</ion-label>
+          <ion-input type="password" [(ngModel)]="user.senha"></ion-input>
+          <ion-avatar item-end>
+            <ion-icon name="md-eye" class="text-light"></ion-icon>
+          </ion-avatar>
+        </ion-item>
+
+        <p text-right class="text-orange" (click)="goEsqueciSenha()" padding-top padding-bottom margin-bottom>
+          <small>Esqueceu sua senha?</small>
+        </p>
+        <button ion-button round full margin-bottom class="btn-shadow btn" color="iorange" (click)="goLogin()">Entrar</button>
+        <ion-row class="bottom-side">
+          <ion-col col-6>
+            <p>Ou acesse com</p>
+          </ion-col>
+          <ion-col col-6>
+            <ion-row>
+              <ion-col col-4>
+                <img src="assets/imgs/fb.jpg">
+              </ion-col>
+              <ion-col col-4>
+                <img src="assets/imgs/twt.jpg">
+              </ion-col>
+              <ion-col col-4>
+                <img src="assets/imgs/google.jpg">
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </ion-list>
+    </div>
+
+    <div *ngSwitchCase="'register'" class="register">
+      <ion-list no-lines>
+        <ion-item>
+          <ion-label floating>Nome</ion-label>
+          <ion-input type="text" [(ngModel)]="cadastro.nome"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>E-mail</ion-label>
+          <ion-input type="text" [(ngModel)]="cadastro.email"></ion-input>
+        </ion-item>
+        <ion-row>
+          <ion-col col-6 padding-right>
+            <ion-item>
+              <ion-label floating>Senha</ion-label>
+              <ion-input type="password" [(ngModel)]="cadastro.senha"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6 padding-left>
+            <ion-item>
+              <ion-label floating>Confirma Senha</ion-label>
+              <ion-input type="password" [(ngModel)]="cadastro.confirmasenha"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+
+        <ion-item>
+          <ion-label class="custom-label">Eu li e concordo com os termos de uso e a política de privacidade.</ion-label>
+          <ion-checkbox color="iorange" checked="false" [(ngModel)]="cadastro.termos"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+      <button ion-button round full class="btn-shadow btn" color="iorange" margin-bottom (click)="register()">Registrar</button>
+    </div>
+  </div>
+</ion-content>
